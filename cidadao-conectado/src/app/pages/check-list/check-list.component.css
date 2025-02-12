@@ -3,35 +3,9 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
 }
-.barra-lateral {
-  width: 270px;
-  height: 100vh;
-  background-color: #f8f9fa;
-  padding: 30px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-}
-.barra-lateral img {
-  width: 110px;
-  display: block;
-  margin: 0 auto 25px;
-}
-.barra-lateral a {
-  display: block;
-  padding: 15px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-.barra-lateral a:hover {
-  color: #ff4500;
-}
+
 .conteudo-principal {
-  margin-left: 270px;
+  /* margin-left: 270px; */
   width: 100%;
 }
 .barra-superior {

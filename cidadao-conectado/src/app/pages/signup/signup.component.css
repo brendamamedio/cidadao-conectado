@@ -1,5 +1,5 @@
 /* Estilização geral da página */
-body {
+#signup {
   font-family: Arial, sans-serif;
   height: 100vh;
   display: flex;
@@ -32,7 +32,7 @@ body {
 /* Container da imagem com sobreposição de cor */
 .image-container {
   flex: 1;
-  background: url('Imaagens/imag-irece.png') no-repeat center center/cover;
+  background: url('/assets/images/imag-irece.png') no-repeat center center/cover;
   position: relative;
 }
 
@@ -60,6 +60,7 @@ body {
   padding: 12px;
   background-color: #dcdcdc;
   width: 100%;
+  border: gray;
 }
 
 /* Estilo do botão de cadastro */
