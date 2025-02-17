@@ -1,0 +1,96 @@
+#login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container-custom {
+  display: flex;
+  width: 95%;
+  max-width: 1200px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.form-container {
+  padding: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-control {
+  margin-bottom: 20px;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: #dcdcdc;
+  width: 100%;
+  font-size: 16px;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-orange {
+  width: 80%;
+  max-width: 300px;
+  padding: 15px;
+  background: #ff6600;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-orange:hover {
+  background: #e65c00;
+}
+.image-container {
+  flex: 1;
+  background: url('/assets/images/imag-irece.png') no-repeat center center/cover;
+  position: relative;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.link-orange {
+  color: #ff6600;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+.link-orange:hover {
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .container-custom {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+  .form-container {
+      padding: 30px;
+  }
+  .image-container {
+      display: none;
+  }
+}

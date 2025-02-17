@@ -17,6 +17,6 @@ import { AppComponent } from '../app.component'; // Import AppComponent
     ComponentsModule,
     // RouterModule
   ],
-  bootstrap: [AppComponent], // Bootstrap AppComponent (if this is the root module)
+  // bootstrap: [AppComponent], // Bootstrap AppComponent (if this is the root module)
 })
 export class PagesModule { }
