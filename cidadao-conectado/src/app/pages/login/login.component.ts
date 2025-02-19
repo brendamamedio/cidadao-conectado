@@ -45,7 +45,7 @@ export class LoginComponent {
     });
   }
 
-  navigate() {
-    this.router.navigate(["signup"]);
+  redirectTo(route: string): void {
+    this.router.navigate([route]);
   }
 }

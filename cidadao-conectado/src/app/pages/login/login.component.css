@@ -26,15 +26,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .form-control {
-  margin-bottom: 20px;
-  border-radius: 25px;
-  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  padding: 12px;
   background-color: #dcdcdc;
   width: 100%;
-  font-size: 16px;
+  border: gray;
 }
 .btn-container {
   width: 100%;
