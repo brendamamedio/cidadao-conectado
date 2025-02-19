@@ -3,26 +3,26 @@
     <!-- Container do formulário de login -->
     <div class="form-container">
         <img src="../../../assets/images/OIP.jpeg" alt="Brasão da cidade" class="logo">
-        <form>
-            <!-- Campo de email -->
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <!-- Campo de senha -->
-            <div class="mb-3">
-                <label class="form-label">Senha</label>
-                <input type="password" class="form-control" placeholder="Senha" required>
-            </div>
-            <!-- Botão de login -->
-            <div class="btn-container">
-                <button type="submit" class="btn-orange">Entrar</button>
-            </div>
-            <!-- Link para cadastro -->
-            <p style="margin-top: 20px;">
-                Não tem uma conta? <a href="index.html" class="link-orange">Cadastre-se</a>
-            </p>
-        </form>
+        <form [formGroup]="loginForm" (submit)="submit()">
+          <!-- Campo de email -->
+          <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Email" formControlName="email" required>
+          </div>
+          <!-- Campo de senha -->
+          <div class="mb-3">
+              <label class="form-label">Senha</label>
+              <input type="password" class="form-control" placeholder="Senha" formControlName="password" required>
+          </div>
+          <!-- Botão de login -->
+          <div class="btn-container">
+              <button type="submit" class="btn-orange">Entrar</button>
+          </div>
+          <!-- Link para cadastro -->
+          <p style="margin-top: 20px;">
+              Não tem uma conta? <a href="index.html" class="link-orange">Cadastre-se</a>
+          </p>
+      </form>
     </div>
     <!-- Container da imagem -->
     <div class="image-container"></div>
