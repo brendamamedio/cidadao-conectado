@@ -7,7 +7,6 @@ body {
 }
 
 .conteudo-principal {
-  /* margin-left: 270px; */
   width: 100%;
 }
 .barra-superior {
@@ -170,7 +169,7 @@ body {
 }
 
 .icon {
-  width: 24px; /* Ajuste o tamanho conforme necessário */
+  width: 24px;
   height: 24px;
   fill: #ff4500;
 }

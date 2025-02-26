@@ -6,15 +6,11 @@ import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-  ],
   providers: [
     LoginService
   ],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'] // Corrigido de 'styleUrl' para 'styleUrls'
+  styleUrls: ['./login.component.css'] 
 })
 export class LoginComponent {
   loginForm: FormGroup;

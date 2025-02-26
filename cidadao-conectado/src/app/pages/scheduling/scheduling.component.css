@@ -257,3 +257,9 @@ h3 {
 .botao-azul:hover {
   opacity: 0.9;
 }
+
+.mensagem-erro {
+  color: #ff0000; /* Cor vermelha para as mensagens de erro */
+  font-size: 14px;
+  margin-top: 5px;
+}

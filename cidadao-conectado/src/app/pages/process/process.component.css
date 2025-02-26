@@ -200,12 +200,16 @@ h3 {
 }
 
 .campo-container input[type="text"],
-.campo-container input[type="tel"] {
+.campo-container input[type="tel"], textarea{
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f0f0f0;
+}
+
+textarea{
+  height: 132px;
 }
 
 .data-hora-container {
@@ -256,4 +260,11 @@ h3 {
 
 .botao-azul:hover {
   opacity: 0.9;
+}
+
+/* Estilo personalizado para a mensagem de sucesso */
+.success-snackbar {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  text-align: center;
 }

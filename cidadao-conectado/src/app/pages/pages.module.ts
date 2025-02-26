@@ -1,36 +1,48 @@
+import { ProcessComponent } from './process/process.component';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; // Import CommonModule instead of BrowserModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Importe FormsModule e ReactiveFormsModule
+import { CommonModule } from '@angular/common'; // Importe o CommonModule
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog'; // Importe o MatDialogModule
 
 import { ComponentsModule } from '../components/components.module';
 import { SignupComponent } from './signup/signup.component';
 import { CheckListComponent } from './check-list/check-list.component';
-import { AppComponent } from '../app.component'; // Import AppComponent
-import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
-
-console.log("✅ PagesModule foi carregado!");
+import { SchedulingComponent } from './scheduling/scheduling.component'; // Importe o SchedulingComponent
+import { LoginComponent } from './login/login.component'; // Importe o LoginComponent
+import { HomeComponent } from './home/home.component';
+import { ModuloComponent } from './modulo/modulo.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 @NgModule({
   declarations: [
     SignupComponent,
-    CheckListComponent
+    CheckListComponent,
+    SchedulingComponent, // Adicione o SchedulingComponent aqui
+    LoginComponent, // Adicione o LoginComponent aqui
+    HomeComponent,
+    ProcessComponent,
+    ModuloComponent,
+    ComplaintComponent
   ],
   imports: [
-    FormsModule,
-    CommonModule, // Use CommonModule here
-    ComponentsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-    // RouterModule
+    CommonModule, // Use CommonModule aqui (apenas uma vez)
+    FormsModule, // Adicione o FormsModule
+    ReactiveFormsModule, // Adicione o ReactiveFormsModule
+    HttpClientModule, // Adicione o HttpClientModule
+    MatSnackBarModule, // Adicione o MatSnackBarModule
+    MatDialogModule, // Adicione o MatDialogModule
+    RouterModule, // Adicione o RouterModule, se necessário
+    ComponentsModule // Adicione o ComponentsModule
   ],
   exports: [ // Exportar componentes se forem usados em outros módulos
     SignupComponent,
-    CheckListComponent
+    CheckListComponent,
+    SchedulingComponent, // Exporte o SchedulingComponent se necessário
+    ProcessComponent,
+    LoginComponent // Exporte o LoginComponent se necessário
   ]
-  // bootstrap: [AppComponent], // Bootstrap AppComponent (if this is the root module)
 })
 export class PagesModule { }

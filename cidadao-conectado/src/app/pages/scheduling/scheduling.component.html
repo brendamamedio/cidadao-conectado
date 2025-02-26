@@ -1,5 +1,5 @@
 <div class="conteudo-principal">
-  <!-- Barra superior com opções de acessibilidade e redes sociais -->
+
   <div class="barra-superior">
     <div>
       <a href="#">ACESSIBILIDADE</a>
@@ -9,18 +9,18 @@
       <a href="#">ACESSO À INFORMAÇÃO</a>
     </div>
     <div class="icones-sociais">
-      <!-- Ícones das redes sociais -->
+
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 
-  <!-- Barra de pesquisa -->
+
   <div class="container-pesquisa">
     <div class="barra-pesquisa">
       <input type="text" placeholder="Digite sua Busca" />
-      <!-- Caixa de busca -->
+
     </div>
     <div class="opcoes-acesso">
       <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
@@ -29,17 +29,17 @@
     </div>
   </div>
 
-  <!-- Barra laranja (ainda sem conteúdo) -->
+
   <div class="barra-laranja"></div>
 
-  <!-- Seção de conteúdo principal -->
+
   <div class="secao-conteudo">
     <br />
     <br />
     <h2>Ficha de Atendimento Presencial</h2>
     <br />
     <h3>Preencha os Campos Abaixo Para Agendar</h3>
-    <form class="formulario-container">
+    <form class="formulario-container" #agendamentoForm="ngForm" (ngSubmit)="submitAgendamento(agendamentoForm)">
       <div class="campo-container">
         <label for="nome">Nome Completo:</label>
         <input
@@ -48,7 +48,13 @@
           name="nome"
           placeholder="Digite seu nome completo..."
           required
+          ngModel
+          #nome="ngModel"
         />
+
+        <div *ngIf="nome.invalid && (nome.touched || nome.dirty)" class="mensagem-erro">
+          O campo Nome Completo é obrigatório.
+        </div>
 
         <label for="telefone">Telefone:</label>
         <input
@@ -57,17 +63,45 @@
           name="telefone"
           placeholder="(XX) XXXXX-XXXX"
           required
+          ngModel
+          #telefone="ngModel"
         />
+
+        <div *ngIf="telefone.invalid && (telefone.touched || telefone.dirty)" class="mensagem-erro">
+          O campo Telefone é obrigatório.
+        </div>
       </div>
       <br />
       <div class="data-hora-container">
         <div>
           <label for="data">Data:</label>
-          <input type="date" id="data" name="data" required />
+          <input
+            type="date"
+            id="data"
+            name="data"
+            required
+            ngModel
+            #data="ngModel"
+          />
+
+          <div *ngIf="data.invalid && (data.touched || data.dirty)" class="mensagem-erro">
+            O campo Data é obrigatório.
+          </div>
         </div>
         <div>
           <label for="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required />
+          <input
+            type="time"
+            id="hora"
+            name="hora"
+            required
+            ngModel
+            #hora="ngModel"
+          />
+          
+          <div *ngIf="hora.invalid && (hora.touched || hora.dirty)" class="mensagem-erro">
+            O campo Hora é obrigatório.
+          </div>
         </div>
       </div>
       <br />
@@ -78,7 +112,7 @@
         <li>Título de eleitor</li>
       </ul>
 
-      <button type="submit" class="botao-verde">&#128279; SOLICITAR</button>
+      <button type="submit" class="botao-verde"><span class="material-icons">send</span> SOLICITAR</button>
     </form>
   </div>
 </div>

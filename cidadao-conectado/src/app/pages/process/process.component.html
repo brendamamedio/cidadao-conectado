@@ -1,5 +1,4 @@
 <div class="conteudo-principal">
-  <!-- Barra superior com opções de acessibilidade e redes sociais -->
   <div class="barra-superior">
     <div>
       <a href="#">ACESSIBILIDADE</a>
@@ -9,18 +8,15 @@
       <a href="#">ACESSO À INFORMAÇÃO</a>
     </div>
     <div class="icones-sociais">
-      <!-- Ícones das redes sociais -->
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
 
-  <!-- Barra de pesquisa -->
   <div class="container-pesquisa">
     <div class="barra-pesquisa">
       <input type="text" placeholder="Digite sua Busca" />
-      <!-- Caixa de busca -->
     </div>
     <div class="opcoes-acesso">
       <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
@@ -29,10 +25,8 @@
     </div>
   </div>
 
-  <!-- Barra laranja (ainda sem conteúdo) -->
   <div class="barra-laranja"></div>
 
-  <!-- Seção de conteúdo principal -->
   <div class="secao-conteudo">
     <br />
     <br />
@@ -40,7 +34,7 @@
     <br />
     <h3>Instrução de Processo Administrativo</h3>
     <div class="formulario-container">
-      <form class="formulario-container">
+      <form class="formulario-container" #processForm="ngForm" (ngSubmit)="submitRequest(processForm)">
         <div class="campo-container">
           <label for="requerente">Requerente*:</label>
           <input
@@ -49,7 +43,13 @@
             name="requerente"
             placeholder="Digite o nome completo..."
             required
+            ngModel
+            #requerente="ngModel"
           />
+
+          <div *ngIf="requerente.invalid && (requerente.touched || requerente.dirty)" class="mensagem-erro">
+            O campo Requerente é obrigatório.
+          </div>
 
           <label for="cnpj">CNPJ / CPF*:</label>
           <input
@@ -58,7 +58,13 @@
             name="cnpj"
             placeholder="Digite o CNPJ ou CPF..."
             required
+            ngModel
+            #cnpj="ngModel"
           />
+
+          <div *ngIf="cnpj.invalid && (cnpj.touched || cnpj.dirty)" class="mensagem-erro">
+            O campo CNPJ / CPF é obrigatório.
+          </div>
 
           <label for="endereco">Endereço*:</label>
           <input
@@ -67,7 +73,13 @@
             name="endereco"
             placeholder="Digite o endereço..."
             required
+            ngModel
+            #endereco="ngModel"
           />
+
+          <div *ngIf="endereco.invalid && (endereco.touched || endereco.dirty)" class="mensagem-erro">
+            O campo Endereço é obrigatório.
+          </div>
 
           <label for="bairro">Bairro:</label>
           <input
@@ -75,6 +87,7 @@
             id="bairro"
             name="bairro"
             placeholder="Digite o bairro..."
+            ngModel
           />
 
           <label for="cidade">Cidade*:</label>
@@ -84,7 +97,13 @@
             name="cidade"
             placeholder="Digite a cidade..."
             required
+            ngModel
+            #cidade="ngModel"
           />
+          
+          <div *ngIf="cidade.invalid && (cidade.touched || cidade.dirty)" class="mensagem-erro">
+            O campo Cidade é obrigatório.
+          </div>
 
           <label for="codigo">Código:</label>
           <input
@@ -92,6 +111,7 @@
             id="codigo"
             name="codigo"
             placeholder="Digite o código..."
+            ngModel
           />
         </div>
         <br />
@@ -99,36 +119,36 @@
         <br />
         <div class="motivos-container">
           <label
-            ><input type="checkbox" name="motivo" value="pagamento" />
-            Doação em pagamento</label
+            ><input type="checkbox" name="motivo" value="pagamento" /> Doação em
+            pagamento</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="revisao" /> Revisão
-            de Área</label
+            ><input type="checkbox" name="motivo" value="revisao" /> Revisão de
+            Área</label
           >
           <label
             ><input type="checkbox" name="motivo" value="cancelamento" />
             Cancelamento de Dívida Ativa</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="inativar" />
-            Inativar Inscrição</label
+            ><input type="checkbox" name="motivo" value="inativar" /> Inativar
+            Inscrição</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="cadastro" />
-            Inscrição Cadastro Imobiliário</label
+            ><input type="checkbox" name="motivo" value="cadastro" /> Inscrição
+            Cadastro Imobiliário</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="cadastrar" />
-            Cadastrar Inscrição</label
+            ><input type="checkbox" name="motivo" value="cadastrar" /> Cadastrar
+            Inscrição</label
           >
           <label
             ><input type="checkbox" name="motivo" value="desmembramento" />
             Desmembramento de área</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="escritura" />
-            Escritura de Doação</label
+            ><input type="checkbox" name="motivo" value="escritura" /> Escritura
+            de Doação</label
           >
           <label
             ><input type="checkbox" name="motivo" value="tributos" />
@@ -139,12 +159,12 @@
             Cancelamento de Dívida ativa em Execução</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="certidao" />
-            Certidão e Cadastro de Lançamento de IPTU</label
+            ><input type="checkbox" name="motivo" value="certidao" /> Certidão e
+            Cadastro de Lançamento de IPTU</label
           >
           <label
-            ><input type="checkbox" name="motivo" value="averbacao" />
-            Certidão e Cadastro para Averbação</label
+            ><input type="checkbox" name="motivo" value="averbacao" /> Certidão
+            e Cadastro para Averbação</label
           >
         </div>
 
@@ -153,14 +173,15 @@
           id="outro"
           name="outro"
           placeholder="Digite aqui outro motivo..."
+          ngModel
         ></textarea>
 
         <div class="botoes-container">
           <button type="button" class="botao-azul">
-            &#128206; ANEXAR DOCUMENTOS
+            <span class="material-icons">attach_file</span> ANEXAR DOCUMENTOS
           </button>
           <button type="submit" class="botao-verde">
-            &#128279; SOLICITAR
+            <span class="material-icons">send</span> SOLICITAR
           </button>
         </div>
       </form>
