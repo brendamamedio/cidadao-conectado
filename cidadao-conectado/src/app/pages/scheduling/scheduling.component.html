@@ -1,0 +1,84 @@
+<div class="conteudo-principal">
+  <!-- Barra superior com opções de acessibilidade e redes sociais -->
+  <div class="barra-superior">
+    <div>
+      <a href="#">ACESSIBILIDADE</a>
+      <a href="#">A-</a>
+      <a href="#">A</a>
+      <a href="#">A+</a>
+      <a href="#">ACESSO À INFORMAÇÃO</a>
+    </div>
+    <div class="icones-sociais">
+      <!-- Ícones das redes sociais -->
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- Barra de pesquisa -->
+  <div class="container-pesquisa">
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="Digite sua Busca" />
+      <!-- Caixa de busca -->
+    </div>
+    <div class="opcoes-acesso">
+      <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
+      <a href="#"><i class="fa fa-comments"></i> Ouvidoria</a>
+      <a href="#"><i class="fa fa-user"></i> Login</a>
+    </div>
+  </div>
+
+  <!-- Barra laranja (ainda sem conteúdo) -->
+  <div class="barra-laranja"></div>
+
+  <!-- Seção de conteúdo principal -->
+  <div class="secao-conteudo">
+    <br />
+    <br />
+    <h2>Ficha de Atendimento Presencial</h2>
+    <br />
+    <h3>Preencha os Campos Abaixo Para Agendar</h3>
+    <form class="formulario-container">
+      <div class="campo-container">
+        <label for="nome">Nome Completo:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite seu nome completo..."
+          required
+        />
+
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="(XX) XXXXX-XXXX"
+          required
+        />
+      </div>
+      <br />
+      <div class="data-hora-container">
+        <div>
+          <label for="data">Data:</label>
+          <input type="date" id="data" name="data" required />
+        </div>
+        <div>
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" required />
+        </div>
+      </div>
+      <br />
+      <h4>Lista de documentos necessários no atendimento:</h4>
+      <ul>
+        <li>Documento com foto (RG)</li>
+        <li>Comprovante de residência</li>
+        <li>Título de eleitor</li>
+      </ul>
+
+      <button type="submit" class="botao-verde">&#128279; SOLICITAR</button>
+    </form>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-check-list',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class CheckListComponent {
 
+  constructor(private router: Router) {}
+
+  redirectTo(route: string): void {
+    this.router.navigate([route]);
+  }
 }

@@ -2,39 +2,16 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
+  background-color: #f4f4f4;
+
 }
-.barra-lateral {
-  width: 270px;
-  height: 100vh;
-  background-color: #f8f9fa;
-  padding: 30px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.barra-lateral img {
-  width: 110px;
-  display: block;
-  margin: 0 auto 25px;
-}
-.barra-lateral a {
-  display: block;
-  padding: 15px;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-.barra-lateral a:hover {
-  color: #ff4500;
-}
+
 .conteudo-principal {
-  margin-left: 270px;
+  /* margin-left: 270px; */
   width: 100%;
 }
 .barra-superior {
-  background-color: #0055a4;
+  background-color: #0055A4;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
@@ -56,7 +33,7 @@ body {
   font-size: 16px;
 }
 .container-pesquisa {
-  background-color: white;
+
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -119,7 +96,7 @@ body {
   overflow: hidden;
 }
 .noticia img {
-  width: 100%;
+  width: 400px;
   border-radius: 5px;
   transition: transform 0.3s ease;
   aspect-ratio: 497/332;
@@ -172,7 +149,7 @@ body {
 }
 
 .category-button {
-  background-color: white;
+
   border: 0;
   border-top: 2px solid #ff4500;
   color: black;

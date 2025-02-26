@@ -1,0 +1,96 @@
+<div class="conteudo-principal">
+  <div class="barra-superior">
+      <div>
+          <a href="#">ACESSIBILIDADE</a>
+          <a href="#">A-</a>
+          <a href="#">A</a>
+          <a href="#">A+</a>
+          <a href="#">ACESSO À INFORMAÇÃO</a>
+      </div>
+      <div class="icones-sociais">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+  </div>
+  <div class="container-pesquisa">
+      <div class="barra-pesquisa">
+          <input type="text" placeholder="Digite sua Busca">
+      </div>
+      <div class="opcoes-acesso">
+          <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
+          <a href="#"><i class="fa fa-comments"></i> Ouvidoria</a>
+          <a (click)="redirectTo('/login')"><i class="fa fa-user"></i> Login</a>
+      </div>
+  </div>
+
+
+  <div class="barra-laranja">
+  </div>
+  <div class="secao-conteudo">
+    <div class="bem-vindo">
+        <p>Bem-vindo(a) ao </p>
+        <span>Prefeitura Atende</span>
+    </div>
+
+    <div class="noticias">
+        <div class="container">
+            <div class="noticia">
+                <img src="../../../assets/images/aulas.jpg" alt="Educação">
+                <div class="overlay"></div>
+            </div>
+            <div class="descricao">
+                <p>Educação: Irecê inicia ano letivo com Jornada Pedagógica 2025</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="noticia">
+                <img src="../../../assets/images/agricutura.png" alt="Agricultura">
+                <div class="overlay"></div>
+            </div>
+            <div class="descricao">
+                <p>Agricultura: Apoio ao produtor rural fortalece economia local</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="noticia">
+                <img src="../../../assets/images/construcao.png" alt="Infraestrutura">
+                <div class="overlay">
+                </div>
+            </div>
+            <div class="descricao">
+            <p>Infraestrutura: Novos investimentos em mobilidade urbana</p>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Categorias de Serviços</h1>
+        <div class="category-buttons">
+            <button (click)="redirectTo('/modulo')" class="category-button">
+              <img src="../../../assets/svgs/nota-eletronica.svg" alt="Nota Eletrônica" class="icon">
+              Nota Eletrônica
+            </button>
+            <button (click)="redirectTo('/modulo')"class="category-button">
+              <img src="../../../assets/svgs/economico.svg" alt="Econômico" class="icon">
+              Econômico
+            </button>
+            <button (click)="redirectTo('/modulo')"class="category-button">
+              <img src="../../../assets/svgs/imobiliario-iptu.svg" alt="Imobiliário / IPTU" class="icon">
+              Imobiliário / IPTU
+            </button>
+            <button (click)="redirectTo('/modulo')" class="category-button">
+              <img src="../../../assets/svgs/contribuinte-outros.svg" alt="Contribuinte / Outros" class="icon">
+              Contribuinte / Outros
+            </button>
+            <button (click)="redirectTo('/modulo')" class="category-button">
+              <img src="../../../assets/svgs/documentos.svg" alt="Documentos" class="icon">
+              Documentos
+            </button>
+          </div>
+      </div>
+      <div class="map-container">
+        <h2>Mapa</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.05670432554905!2d-41.85612078756098!3d-11.301516613625024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x76ed4b9eda30f83%3A0xd2349874c47312e6!2sPrefeitura%20Atende!5e0!3m2!1spt-BR!2sbr!4v1739990972733!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+</div>
+</div>
