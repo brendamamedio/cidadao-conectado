@@ -1,0 +1,65 @@
+<!-- Barra lateral (Menu de navegação) -->
+<div class="barra-lateral">
+  <img src="../../../assets/images/OIP.jpeg" alt="Logo da Prefeitura"> <!-- Logo -->
+  <a href="#" style="color: #ff4500;">Início</a> <!-- Link para página inicial -->
+  <a href="#">Diário Oficial</a>
+  <a href="#">Serviços Online</a>
+  <a href="#">Acesso à Informação</a>
+  <a href="#">Portal da Transparência</a>
+</div>
+
+<!-- Conteúdo principal da página -->
+<div class="conteudo-principal">
+  <!-- Barra superior com opções de acessibilidade e redes sociais -->
+  <div class="barra-superior">
+    <div>
+      <a href="#">ACESSIBILIDADE</a>
+      <a href="#">A-</a>
+      <a href="#">A</a>
+      <a href="#">A+</a>
+      <a href="#">ACESSO À INFORMAÇÃO</a>
+    </div>
+    <div class="icones-sociais">
+      <!-- Ícones das redes sociais -->
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- Barra de pesquisa -->
+  <div class="container-pesquisa">
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="Digite sua Busca"> <!-- Caixa de busca -->
+    </div>
+    <div class="opcoes-acesso">
+      <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
+      <a href="#"><i class="fa fa-comments"></i> Ouvidoria</a>
+      <a href="#"><i class="fa fa-user"></i> Login</a>
+    </div>
+  </div>
+
+  <!-- Barra laranja (ainda sem conteúdo) -->
+  <div class="barra-laranja">
+  </div>
+
+  <!-- Seção de conteúdo principal -->
+  <div class="secao-conteudo">
+    <p style="color: #ff4500; font-weight: bold;">BEM VINDO(A)</p>
+    <h1>Prefeitura Atende</h1>
+    <br>
+    <br>
+    <h2>Nota Eletrónica</h2>
+    <br>
+    <h3> Serviços Nota Eletrónica</h3>
+    <button (click)="redirectTo('/check-list')" class="botao">Solicitar Habilitação Empresa/Autônomo</button>
+    <button (click)="redirectTo('/check-list')" class="botao">Solicitar Habitação Nota Avulsa</button>
+    <button (click)="redirectTo('/check-list')" class="botao">Consultar Solicitaçâo de Habilitação</button>
+    <br>
+    <h3>Consultas</h3>
+    <br>
+    <button (click)="redirectTo('/check-list')" class="botao">Verificar Autenticidade</button>
+    <button (click)="redirectTo('/check-list')" class="botao">Verificar Autenticidade de DENFIS</button>
+    <button (click)="redirectTo('/check-list')" class="botao">Consultar RPS</button>
+    <button (click)="redirectTo('/check-list')" class="botao">Lista de Prestadores Habilitados</button>
+  </div>
