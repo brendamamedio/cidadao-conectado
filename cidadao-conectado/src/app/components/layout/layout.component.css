@@ -13,5 +13,4 @@
 .content {
   flex: 1; /* O conteúdo ocupa o restante do espaço disponível */
   padding-left: 32px;
-  background-color: #f4f4f4;
 }
