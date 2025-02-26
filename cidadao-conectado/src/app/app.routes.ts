@@ -5,6 +5,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModuloComponent } from './pages/modulo/modulo.component';
+import { SchedulingComponent } from './pages/scheduling/scheduling.component';
+import { ProcessComponent } from './pages/process/process.component';
 
 export const routes: Routes = [
   {
@@ -12,6 +14,8 @@ export const routes: Routes = [
       { path: 'check-list', component: CheckListComponent },
       { path: 'home', component: HomeComponent },
       { path: 'modulo', component: ModuloComponent },
+      { path: 'scheduling', component: SchedulingComponent },
+      { path: 'process', component: ProcessComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' }
     ]
   },
