@@ -1,0 +1,169 @@
+<div class="conteudo-principal">
+  <!-- Barra superior com opções de acessibilidade e redes sociais -->
+  <div class="barra-superior">
+    <div>
+      <a href="#">ACESSIBILIDADE</a>
+      <a href="#">A-</a>
+      <a href="#">A</a>
+      <a href="#">A+</a>
+      <a href="#">ACESSO À INFORMAÇÃO</a>
+    </div>
+    <div class="icones-sociais">
+      <!-- Ícones das redes sociais -->
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- Barra de pesquisa -->
+  <div class="container-pesquisa">
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="Digite sua Busca" />
+      <!-- Caixa de busca -->
+    </div>
+    <div class="opcoes-acesso">
+      <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
+      <a href="#"><i class="fa fa-comments"></i> Ouvidoria</a>
+      <a href="#"><i class="fa fa-user"></i> Login</a>
+    </div>
+  </div>
+
+  <!-- Barra laranja (ainda sem conteúdo) -->
+  <div class="barra-laranja"></div>
+
+  <!-- Seção de conteúdo principal -->
+  <div class="secao-conteudo">
+    <br />
+    <br />
+    <h2>Solicitação de Processo Administrativo</h2>
+    <br />
+    <h3>Instrução de Processo Administrativo</h3>
+    <div class="formulario-container">
+      <form class="formulario-container">
+        <div class="campo-container">
+          <label for="requerente">Requerente*:</label>
+          <input
+            type="text"
+            id="requerente"
+            name="requerente"
+            placeholder="Digite o nome completo..."
+            required
+          />
+
+          <label for="cnpj">CNPJ / CPF*:</label>
+          <input
+            type="text"
+            id="cnpj"
+            name="cnpj"
+            placeholder="Digite o CNPJ ou CPF..."
+            required
+          />
+
+          <label for="endereco">Endereço*:</label>
+          <input
+            type="text"
+            id="endereco"
+            name="endereco"
+            placeholder="Digite o endereço..."
+            required
+          />
+
+          <label for="bairro">Bairro:</label>
+          <input
+            type="text"
+            id="bairro"
+            name="bairro"
+            placeholder="Digite o bairro..."
+          />
+
+          <label for="cidade">Cidade*:</label>
+          <input
+            type="text"
+            id="cidade"
+            name="cidade"
+            placeholder="Digite a cidade..."
+            required
+          />
+
+          <label for="codigo">Código:</label>
+          <input
+            type="text"
+            id="codigo"
+            name="codigo"
+            placeholder="Digite o código..."
+          />
+        </div>
+        <br />
+        <h4>Motivo da Solicitação</h4>
+        <br />
+        <div class="motivos-container">
+          <label
+            ><input type="checkbox" name="motivo" value="pagamento" />
+            Doação em pagamento</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="revisao" /> Revisão
+            de Área</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="cancelamento" />
+            Cancelamento de Dívida Ativa</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="inativar" />
+            Inativar Inscrição</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="cadastro" />
+            Inscrição Cadastro Imobiliário</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="cadastrar" />
+            Cadastrar Inscrição</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="desmembramento" />
+            Desmembramento de área</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="escritura" />
+            Escritura de Doação</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="tributos" />
+            Restituição e Compensação de Tributos</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="execucao" />
+            Cancelamento de Dívida ativa em Execução</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="certidao" />
+            Certidão e Cadastro de Lançamento de IPTU</label
+          >
+          <label
+            ><input type="checkbox" name="motivo" value="averbacao" />
+            Certidão e Cadastro para Averbação</label
+          >
+        </div>
+
+        <label for="outro">Outro:</label>
+        <textarea
+          id="outro"
+          name="outro"
+          placeholder="Digite aqui outro motivo..."
+        ></textarea>
+
+        <div class="botoes-container">
+          <button type="button" class="botao-azul">
+            &#128206; ANEXAR DOCUMENTOS
+          </button>
+          <button type="submit" class="botao-verde">
+            &#128279; SOLICITAR
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
