@@ -20,7 +20,6 @@
   <div class="container-pesquisa">
     <div class="barra-pesquisa">
       <input type="text" placeholder="Digite sua Busca" />
-      <!-- Caixa de busca -->
     </div>
     <div class="opcoes-acesso">
       <a href="#"><i class="fa fa-envelope"></i> e-SIC</a>
@@ -39,13 +38,22 @@
     <h2>Ficha de Atendimento Presencial</h2>
     <br />
     <h3>Preencha os Campos Abaixo Para Agendar</h3>
-    <form class="formulario-container">
+
+    <!-- Mensagens de sucesso/erro -->
+    <div *ngIf="successMessage" class="mensagem-sucesso">
+      {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="mensagem-erro">
+      {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario-container">
       <div class="campo-container">
         <label for="nome">Nome Completo:</label>
         <input
           type="text"
           id="nome"
-          name="nome"
+          formControlName="nome"
           placeholder="Digite seu nome completo..."
           required
         />
@@ -54,7 +62,7 @@
         <input
           type="tel"
           id="telefone"
-          name="telefone"
+          formControlName="telefone"
           placeholder="(XX) XXXXX-XXXX"
           required
         />
@@ -63,12 +71,33 @@
       <div class="data-hora-container">
         <div>
           <label for="data">Data:</label>
-          <input type="date" id="data" name="data" required />
+          <input type="date" id="data" formControlName="data" required />
         </div>
-        <div>
-          <label for="hora">Hora:</label>
-          <input type="time" id="hora" name="hora" required />
+      </div>
+      <br />
+      <div class="horarios-container">
+        <h4>Selecione um horário disponível:</h4>
+        <div class="lista-horarios">
+          <label *ngFor="let time of availableTimes" class="horario-item">
+            <input
+              type="checkbox"
+              [value]="time"
+              [disabled]="isTimeDisabled(time)"
+              (change)="selecionarHorario(time)"
+            />
+            {{ time }}
+          </label>
         </div>
+      </div>
+      <br />
+      <div class="campo-container">
+        <label for="motivo">Motivo da Solicitação:</label>
+        <textarea
+          id="motivo"
+          formControlName="motivo"
+          placeholder="Descreva o motivo do agendamento..."
+          required
+        ></textarea>
       </div>
       <br />
       <h4>Lista de documentos necessários no atendimento:</h4>

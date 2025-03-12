@@ -257,3 +257,51 @@ h3 {
 .botao-azul:hover {
   opacity: 0.9;
 }
+
+.horarios-container {
+  margin-top: 20px;
+}
+
+.lista-horarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.horario-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.horario-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.horario-item input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+.horario-item:has(input[type="checkbox"]:disabled) {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+}
+
+.mensagem-sucesso {
+  color: green;
+  background-color: #e6ffe6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.mensagem-erro {
+  color: red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

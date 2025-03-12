@@ -9,3 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+pInputTextarea {
+  height: 100px;
+}

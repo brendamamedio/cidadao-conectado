@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ModuloComponent } from './pages/modulo/modulo.component';
 import { SchedulingComponent } from './pages/scheduling/scheduling.component';
 import { ProcessComponent } from './pages/process/process.component';
+import { SchedulesComponent } from './pages/schedules/schedules.component';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,7 @@ export const routes: Routes = [
       { path: 'modulo', component: ModuloComponent },
       { path: 'scheduling', component: SchedulingComponent },
       { path: 'process', component: ProcessComponent },
+      { path: 'schedules', component: SchedulesComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' }
     ]
   },
